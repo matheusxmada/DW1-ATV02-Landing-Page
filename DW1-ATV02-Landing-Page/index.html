@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bella Pizza</title>
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1 class="logo fonte-serifada">Bella Pizza</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="menu">
+        <div class="hero-content">
+            <h2>A melhor pizza da cidade!</h2>
+            <p>
+                Com sabores irresistíveis preparados com  os melhores ingredientes frescos.
+            </p>
+            <div class="botao-container">
+                <span class="badge-oferta">
+                    Oferta!
+                </span>
+                <button class="btn btn-danger btn-lg">
+                    Peça agora
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALERT BOOTSTRAP -->
+    <div class="container mt-4">
+        <div class="alert alert-warning text-center" role="alert">
+            🍕 PROMOÇÃO ESPECIAL: na compra de 2 PIZZAS GRANDES,
+            ganhe REFRIGERANTE GRÁTIS!
+        </div>
+    </div>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="cardapio">
+        <h2 class="fonte-serifada">Principais Pizzas</h2>
+        <div class="cards-container">
+            <div class="card-pizza">
+                <img
+                    src="img\pizza_calabresa.jpg"
+                    alt="Pizza Calabresa"/>
+
+                <h3 class="fonte-serifada">Calabresa</h3>
+                <p>
+                    Molho especial, queijo mussarela e calabresa fatiada.
+                </p>
+            </div>
+
+            <div class="card-pizza">
+                <img
+                    src="img\pizza_marguerita.jpg"
+                    alt="Pizza Marguerita"/>
+                <h3 class="fonte-serifada">Marguerita</h3>
+                <p>
+                    Queijo, tomate fresco, manjericão e azeite especial.
+                </p>
+            </div>
+
+            <div class="card-pizza">
+                <img
+                    src="img\pizza_catupiry.png"
+                    alt="Pizza Frango com Catupiry"/>
+
+                <h3 class="fonte-serifada">Frango com Catupiry</h3>
+                <p>
+                    Frango desfiado temperado com muito catupiry.
+                </p>
+            </div>
+
+            <div class="card-pizza">
+                <img
+                    src="img\pizza_portuguesa.jpg"
+                    alt="Pizza Portuguesa"/>
+                <h3 class="fonte-serifada">Portuguesa</h3>
+                <p>
+                    Presunto, ovos, cebola, ervilha e queijo mussarela.
+                </p>
+            </div>
+        </div>
+
+        <div class="div-botao-cardapio">
+            <button class="botao-cardapio">
+                Veja o cardápio completo
+            </button>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre">
+
+        <div class="sobre-imagem">
+            <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1200&auto=format&fit=crop"
+                alt="Pizza deliciosa"
+            />
+        </div>
+        <div class="sobre-texto">
+            <h2 class="fonte-serifada">Sobre a Bella Pizza</h2>
+            <p>
+                A Bella Pizza nasceu com a missão de levar sabor,
+                qualidade e momentos especiais para a sua mesa.
+                Trabalhamos diariamente com ingredientes frescos,
+                massas artesanais e receitas exclusivas preparadas
+                com muito cuidado e dedicação. Nossa equipe busca
+                oferecer uma experiência única, combinando tradição,
+                atendimento acolhedor e sabores irresistíveis que
+                conquistam clientes todos os dias. Aqui, cada pizza
+                é preparada com paixão para tornar seus momentos
+                ainda mais deliciosos.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="contato">
+        <h2 class="fonte-serifada">Contato</h2>
+        <div class="contato-container">
+            <div class="info-contato">
+                <div>
+                    <h3>Endereço</h3>
+                    <p>Rua das Pizzas, 123</p>
+                </div>
+                <div>
+                    <h3>Telefone</h3>
+                    <p>(11) 99999-9999</p>
+                </div>
+                <div>
+                    <h3>Horário</h3>
+                    <p>18h às 23h</p>
+                </div>
+            </div>
+
+            <!-- FORMULÁRIO -->
+            <form class="formulario">
+                <div class="mb-3">
+                    <label class="form-label">Nome</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        required/>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">E-mail</label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        required/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Mensagem</label>
+                    <textarea
+                        class="form-control"
+                        rows="4"
+                    ></textarea>
+                </div>
+                <button
+                    type="button"
+                    class="btn btn-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalSucesso">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- MODAL -->
+    <div
+        class="modal fade"
+        id="modalSucesso"
+        tabindex="-1"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Mensagem enviada
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    Seu contato foi enviado com sucesso!
+                </div>
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>
+            © 2026 Bella Pizza - Todos os direitos reservados.
+        </p>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
